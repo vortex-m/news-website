@@ -9,6 +9,7 @@ async function fetchNews(query) {
     const res = await fetch(`${url}${query}&apiKey = ${API_KEY}`)
     const data = await res.json();
     bindData = (data.articles);
+    
 }
 
 function bindData(articles) {
@@ -31,7 +32,8 @@ function fillData(cardClone,article){
     const newsSource = cardClone.querySelector('#news-source')
     const newsDesc = cardClone.querySelector('#news-disc')
 
-    newsImg.src = article.urlToImage
-    newsTitle.innerHTML = article.title
-    newsDesc.innerHTML = article.description 
+    newsImg.src = article.urlToImage;
+    newsTitle.innerHTML = article.title;
+    newsSource.innerHTML = article.source;
+    newsDesc.innerHTML = article.description; 
 }
