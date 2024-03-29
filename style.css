@@ -92,3 +92,13 @@ nav {
     padding: 7px;
     border-radius: 50%;
 }
+
+.card{
+    margin-top: 10%;
+}
+
+.news-desc{
+    margin-top: 1%;
+    max-width: 430px;
+    overflow: hidden;
+}
