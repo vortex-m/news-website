@@ -118,3 +118,7 @@ ul {
     max-width: 430px;
     overflow: hidden;
 }
+
+.news-card{
+    margin-top: -60px;
+}
