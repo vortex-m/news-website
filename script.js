@@ -6,9 +6,10 @@ window.addEventListener('load', () => {
 })
 
 async function fetchNews(query) {
-    const res = await fetch(`${url}${query}&apiKey = ${API_KEY}`)
+    const res = await fetch(`${url}${query} &apiKey = ${API_KEY}`)
     const data = await res.json();
     bindData = (data.articles);
+    console.log(res)
 }
 
 function bindData(articles) {
@@ -18,14 +19,14 @@ function bindData(articles) {
     container.innerHTML = '';
 
     articles.forEach(article => {
-        if(!article.urlToImage) return;
+        if (!article.urlToImage) return;
         const cardClone = newsCard.contentEditable.cloneNode(true)
-    
+
         container.appendChild(cardClone)
     })
 }
 
-function fillData(cardClone,article){
+function fillData(cardClone, article) {
     const newsImg = cardClone.querySelector('#news-img')
     const newsTitle = cardClone.querySelector('#news-title')
     const newsSource = cardClone.querySelector('#news-source')
@@ -34,5 +35,5 @@ function fillData(cardClone,article){
     newsImg.src = article.urlToImage;
     newsTitle.innerHTML = article.title;
     newsSource.innerHTML = article.source;
-    newsDesc.innerHTML = article.description; 
+    newsDesc.innerHTML = article.description;
 }
