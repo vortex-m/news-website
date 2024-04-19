@@ -98,7 +98,7 @@ nav {
 }
 
 .search-button {
-    background-color: var(--accent-color);
+    background-color: rgb(224, 224, 224);
     color: white;
     padding: 13px 24px;
     border: none;
@@ -109,7 +109,7 @@ nav {
 }
 
 .search-button:hover {
-    background-color: var(--accent-color-dark);
+    background-color: rgb(166, 164, 164);
 }
 
 main {
